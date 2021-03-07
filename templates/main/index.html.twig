@@ -17,4 +17,16 @@
         <li>Your template at <code><a href="{{ '/home/rufov/TestSymfony/templates/main/index.html.twig'|file_link(0) }}">templates/main/index.html.twig</a></code></li>
     </ul>
 </div>
+<div>
+    <table border="1px">
+        {% for good in results %}
+            <tr>
+                <td>{{ good.category }}</td>
+                <td>{{ good.good }}</td>
+                <td>{{ good.count }}</td>
+                <td>{{ good.price }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
 {% endblock %}
